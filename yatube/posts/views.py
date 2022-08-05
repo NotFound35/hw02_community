@@ -2,10 +2,10 @@ from django.shortcuts import render, get_object_or_404
 
 from .models import Post, Group
 
-
+post_count = 10
 # Create your views here.
 def index(request):
-    posts = Post.objects[:10]
+    posts = Post.objects.all()[:post_count]
     context = {
         'posts': posts,
     }
