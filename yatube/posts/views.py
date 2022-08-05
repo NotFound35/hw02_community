@@ -4,6 +4,8 @@ from .models import Post, Group
 
 post_count = 10
 # Create your views here.
+
+
 def index(request):
     posts = Post.objects.all()[:post_count]
     context = {
