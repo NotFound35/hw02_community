@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}
-  <title>Записи сообщества {{ group }}</title>
+  <title>{{ group.title }}</title>
 {% endblock %}
 {% block content %}
   <div class="container">
-    <h1>Лев Толстой - зеркало русской революции</h1>
-    <p>{{ group.descriptions }}</p>
+    <h1>{{ group.title }}</h1>
+    <p>{{ group.description }}</p>
     {% for post in posts %}
       <ul>
         <li>Автор: {{ post.author.get_full_name }}</li>
